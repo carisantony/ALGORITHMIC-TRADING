@@ -6,10 +6,12 @@ Objective: Use Fama-French + Momentum factor models to rank tech stocks by momen
 Universe: Top 25 tech stocks in S&P 500 (2019–2024)
 Signal: Momentum beta (β_umd) from 60-day rolling OLS regressions
 Execution: Monthly rebalancing; equal-weighted long/short; market-neutral
+
 Performance:
 Sharpe Ratio: 0.24
 Cumulative Return: 17.69%
-🧠 Strategy Methodology
+
+Strategy Methodology
 Download daily price data via Alpaca API
 Join with Fama-French 5-Factor + UMD data (Ken French library)
 Compute daily returns and excess returns
@@ -18,6 +20,7 @@ At each month-end:
 Long top 5 β_umd stocks
 Short bottom 5 β_umd stocks
 Evaluate performance using Sharpe ratio and cumulative returns
+
 📁 Repository Structure
 📂 momentum-longshort-strategy
 ├── data
@@ -30,15 +33,18 @@ Evaluate performance using Sharpe ratio and cumulative returns
 ├── main.py
 ├── README.md
 └── requirements.txt
+
 🔍 Key Results
 The strategy shows strong recovery in trending markets (2023–2024)
 Underperformance during COVID and mean-reverting phases (2021–2022)
 Consistent monthly application of signal with robust logic
+
 📈 Future Enhancements
 Add volatility-based weighting
 Simulate execution costs and slippage
 Expand to cross-sector or global universe
 Include multi-factor signal stacking (e.g., value + momentum)
+
 ⚙️ Requirements
 Python 3.8+
 Libraries: pandas, numpy, statsmodels, matplotlib, pptx
